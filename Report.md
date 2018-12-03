@@ -9,9 +9,9 @@ In this environment, two agents control rackets to bounce a ball over a net. If 
 
 The observation space consists of 8 variables corresponding to the position and velocity of the ball and racket. Each agent receives its own, local observation.  Two continuous actions are available, corresponding to movement toward (or away from) the net, and jumping. 
 
-The task is episodic, and in order to solve the environment, your agents must get an average score of +0.5 (over 100 consecutive episodes, after taking the maximum over both agents). Specifically,
+The task is episodic, and in order to solve the environment, the agents must get an average score of +0.5 (over 100 consecutive episodes, after taking the maximum over both agents). Specifically,
 
-- After each episode, we add up the rewards that each agent received (without discounting), to get a score for each agent. This yields 2 (potentially different) scores. We then take the maximum of these 2 scores.
+- After each episode, the rewards that each agent received are added up(without discounting), to get a score for each agent. This yields 2 (potentially different) scores. Then the maximum of these two scores is taken.
 - This yields a single **score** for each episode.
 
 The environment is considered solved, when the average (over 100 episodes) of those **scores** is at least +0.5.
@@ -57,4 +57,4 @@ The plot shows the average rewards and its rolling mean. The agent is clearly ab
 
 ## Ideas for Future Work
 No real effort was spent on optimizing the various hyperparameters. A grid-search can be used to investigate their influence on the solution. Because comparing and storing the results of a lot of different experiments gets more complex with an increasing number of hyperparameters, I plan to incorporate [sacred](https://github.com/IDSIA/sacred) to configure, organize, log and reproduce experiments with various hyperparameter. 
-Another direction is to use a shared critic as this is said to enhance the stability of training.
+Another direction is to use a shared critic as this is known to enhance the stability of training.
