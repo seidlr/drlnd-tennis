@@ -39,7 +39,6 @@ The environment is considered solved, when the average (over 100 episodes) of th
 
 ### Instructions
 
-### Instructions
 #### Train the agent
 To train the agent run the script `train_agent.py`.
 ```bash
